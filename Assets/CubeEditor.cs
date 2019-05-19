@@ -6,7 +6,7 @@ using UnityEngine;
 [SelectionBase]
 public class CubeEditor : MonoBehaviour {
 
-    [SerializeField] float gridSize = 10f;
+    const int gridSize = 10;
 
     TextMesh textMesh;
 
