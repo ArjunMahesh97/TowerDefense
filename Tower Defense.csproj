@@ -234,6 +234,7 @@
   <ItemGroup>
     <Compile Include="Assets\CubeEditor.cs" />
     <Compile Include="Assets\EnemyMovement.cs" />
+    <Compile Include="Assets\Pathfinder.cs" />
     <Compile Include="Assets\Waypoint.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
