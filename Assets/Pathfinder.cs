@@ -24,7 +24,8 @@ public class Pathfinder : MonoBehaviour {
             }
             else
             {
-                grid.Add(waypoint.GetGridPos(), waypoint);
+                grid.Add(gridPos, waypoint);
+                waypoint.SetTopColor(Color.black);
             }
         }
     }
