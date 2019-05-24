@@ -4,16 +4,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pathfinder : MonoBehaviour {
-
-    Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     //Color startColor = new Color(106, 27, 154, 255);
     [SerializeField] Waypoint startWaypoint, endWaypoint;
+
+    Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
+    Vector2Int[] directions = {
+        Vector2Int.up,
+        Vector2Int.right,
+        Vector2Int.down,
+        Vector2Int.left
+    };
+ 
 
     // Use this for initialization
     void Start () {
         LoadBlocks();
         ColorStartAndEnd();
+        Exploreneighbors();
 	}
+
+    private void Exploreneighbors()
+    {
+        foreach(Vector2Int direction in directions)
+        {
+            Vector2Int exploring = startWaypoint.GetGridPos() + direction;
+            print("Exploring " + exploring);
+            grid[exploring].SetTopColor(Color.blue);
+        }
+    }
 
     private void ColorStartAndEnd()
     {
