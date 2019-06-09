@@ -20,8 +20,14 @@ public class Pathfinder : MonoBehaviour {
     void Start () {
         LoadBlocks();
         ColorStartAndEnd();
-        Exploreneighbors();
+        //Exploreneighbors();
+        Pathfind();
 	}
+
+    private void Pathfind()
+    {
+        
+    }
 
     private void Exploreneighbors()
     {
