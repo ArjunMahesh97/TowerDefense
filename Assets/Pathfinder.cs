@@ -11,6 +11,8 @@ public class Pathfinder : MonoBehaviour {
 
     Queue<Waypoint> queue = new Queue<Waypoint>;
 
+    bool isRunning = true;
+
     Vector2Int[] directions = {
         Vector2Int.up,
         Vector2Int.right,
@@ -30,6 +32,20 @@ public class Pathfinder : MonoBehaviour {
     private void Pathfind()
     {
         queue.Enqueue(startWaypoint);
+
+        if (queue.Count > 0)
+        {
+            var searchCenter = queue.Dequeue();
+            HaltIfEndFound(searchCenter);
+        }
+    }
+
+    private void HaltIfEndFound(Waypoint searchCenter)
+    {
+        if (searchCenter == endWaypoint)
+        {
+            isRunning = false;
+        }
     }
 
     private void Exploreneighbors()
