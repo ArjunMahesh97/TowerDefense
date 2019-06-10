@@ -8,6 +8,9 @@ public class Pathfinder : MonoBehaviour {
     [SerializeField] Waypoint startWaypoint, endWaypoint;
 
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
+
+    Queue<Waypoint> queue = new Queue<Waypoint>;
+
     Vector2Int[] directions = {
         Vector2Int.up,
         Vector2Int.right,
@@ -26,7 +29,7 @@ public class Pathfinder : MonoBehaviour {
 
     private void Pathfind()
     {
-        
+        queue.Enqueue(startWaypoint);
     }
 
     private void Exploreneighbors()
