@@ -33,7 +33,7 @@ public class Pathfinder : MonoBehaviour {
     {
         queue.Enqueue(startWaypoint);
 
-        if (queue.Count > 0)
+        if (queue.Count > 0 && isRunning)
         {
             var searchCenter = queue.Dequeue();
             HaltIfEndFound(searchCenter);
@@ -50,6 +50,7 @@ public class Pathfinder : MonoBehaviour {
 
     private void Exploreneighbors()
     {
+        if (!isRunning) { return; }
         foreach(Vector2Int direction in directions)
         {
             Vector2Int exploring = startWaypoint.GetGridPos() + direction;
