@@ -1,0 +1,2 @@
+C:\CODING\GameDev\projects\Tower Defense\Temp\UnityVS_obj\Debug\Tower Defense.csprojAssemblyReference.cache
+C:\CODING\GameDev\projects\Tower Defense\Temp\UnityVS_obj\Debug\Tower Defense.csproj.CoreCompileInputs.cache
