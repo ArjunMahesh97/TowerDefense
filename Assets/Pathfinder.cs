@@ -33,7 +33,7 @@ public class Pathfinder : MonoBehaviour {
     {
         queue.Enqueue(startWaypoint);
 
-        if (queue.Count > 0 && isRunning)
+        while (queue.Count > 0 && isRunning)
         {
             var searchCenter = queue.Dequeue();
             print("Searching from: " + searchCenter);
@@ -50,7 +50,6 @@ public class Pathfinder : MonoBehaviour {
     {
         if (searchCenter == endWaypoint)
         {
-            Debug.Log('a');
             isRunning = false;
         }
     }
