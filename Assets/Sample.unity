@@ -3771,6 +3771,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2115881687}
+  - component: {fileID: 2115881688}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -3792,3 +3793,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2115881688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115881686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9732fa27acdcfcf4b85274119328d365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsBetweenSpawns: 5
+  enemyPrefab: {fileID: 114270600974074768, guid: 9f2407ae427321b45a318d45b18d9595,
+    type: 2}
