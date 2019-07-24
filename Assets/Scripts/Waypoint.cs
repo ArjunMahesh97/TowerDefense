@@ -34,9 +34,8 @@ public class Waypoint : MonoBehaviour
 		
 	}
 
-    public void SetTopColor(Color color)
+    private void OnMouseOver()
     {
-        MeshRenderer topMesh = transform.Find("Top").GetComponent<MeshRenderer>();
-        topMesh.material.color = color;
+        print(gameObject.name);
     }
 }
