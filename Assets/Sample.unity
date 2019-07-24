@@ -322,11 +322,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
-    - target: {fileID: 102344672708796808, guid: a1f76307132a3244fbe228b36926988e,
-        type: 2}
-      propertyPath: m_Text
-      value: 2,1
-      objectReference: {fileID: 0}
     - target: {fileID: 1856270668101372, guid: a1f76307132a3244fbe228b36926988e, type: 2}
       propertyPath: m_Name
       value: 2,1
@@ -2365,6 +2360,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1856270668101372, guid: a1f76307132a3244fbe228b36926988e, type: 2}
       propertyPath: m_Name
+      value: 3,4
+      objectReference: {fileID: 0}
+    - target: {fileID: 102344672708796808, guid: a1f76307132a3244fbe228b36926988e,
+        type: 2}
+      propertyPath: m_Text
       value: 3,4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
