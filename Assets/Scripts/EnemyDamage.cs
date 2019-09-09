@@ -5,6 +5,9 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour {
 
     [SerializeField] int hitPoints = 10;
+    [SerializeField] Collider collisionMesh;
+    [SerializeField] ParticleSystem hitParticle;
+    [SerializeField] ParticleSystem deathParticle;
 
 	// Use this for initialization
 	void Start () {
@@ -27,12 +30,14 @@ public class EnemyDamage : MonoBehaviour {
 
     private void KillEnemy()
     {
+        var deathEffect = Instantiate(deathParticle, transform.position, Quaternion.identity);
+        deathEffect.Play();
         Destroy(gameObject);
     }
 
     void ProcessHits()
     {
         hitPoints--;
-        print("HP: " + hitPoints);
+        hitParticle.Play();
     }
 }
